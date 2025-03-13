@@ -30,6 +30,17 @@
                     <i class="fas fa-address-card"></i>
                 </h4>
                 <ContactCard :contact="activeContact" />
+                <div class="mt-2">
+                    <router-link
+                        :to="{
+                            name: 'contact.edit',
+                            params: { id: activeContact._id },
+                        }"
+                        class="btn btn-warning"
+                    >
+                        <i class="fas fa-edit"></i> Hiệu chỉnh
+                    </router-link>
+                </div>
             </div>
         </div>
     </div>
